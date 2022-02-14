@@ -1,0 +1,39 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Paozinho doce",
+      "price": 5.8
+    },
+    {
+      "id": 2,
+      "name": "Arroz",
+      "price": "10.60"
+    },
+    {
+      "name": "SSD 250G",
+      "price": "150.99",
+      "id": 5
+    },
+    {
+      "name": "GTX 1050TI 8G ",
+      "price": "1540.60",
+      "id": 6
+    },
+    {
+      "name": "Produto",
+      "price": "54.90",
+      "id": 7
+    },
+    {
+      "name": "FONTE 750W",
+      "price": "560",
+      "id": 8
+    },
+    {
+      "name": "32G RAM 2400HZ",
+      "price": "360.99",
+      "id": 9
+    }
+  ]
+}
