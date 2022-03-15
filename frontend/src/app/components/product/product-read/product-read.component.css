@@ -3,6 +3,10 @@ table{
     
 }
 
+.example-card {
+    max-width: 400px;
+  }
+
 
 .edit{
     margin-right: 10px;
@@ -15,4 +19,10 @@ table{
 
 .delete > i{
     color:red;
+}
+
+div img {
+    width: 100px;
+    height: 100px;
+    
 }

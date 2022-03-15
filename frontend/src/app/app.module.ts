@@ -18,21 +18,22 @@ import { MatCardModule } from "@angular/material/card";
 import { MatListModule } from "@angular/material/list";
 import { MatButtonModule } from "@angular/material/button";
 import { MatSnackBarModule } from "@angular/material/snack-bar";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 
 import { HttpClientModule } from "@angular/common/http";
 import { ProductReadComponent } from "./components/product/product-read/product-read.component";
-import { ProductRead2Component } from "./components/product/product-read2/product-read2.component";
 import { MatTableModule } from "@angular/material/table";
 import { MatPaginatorModule } from "@angular/material/paginator";
 import { MatSortModule } from "@angular/material/sort";
+import {MatIconModule} from '@angular/material/icon'
 
 import localPt  from "@angular/common/locales/pt";
 import { registerLocaleData } from "@angular/common";
 import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
-import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component'
+import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
+import { ProductCreate2Component } from './components/product/product-create2/product-create2.component';
 
 registerLocaleData(localPt);
 
@@ -46,9 +47,11 @@ registerLocaleData(localPt);
     ProductCrudComponent,
     ProductCreateComponent,
     ProductReadComponent,
-    ProductRead2Component,
     ProductUpdateComponent,
     ProductDeleteComponent,
+    ProductCreate2Component,
+   
+    
   ],
   imports: [
     BrowserModule,
@@ -67,6 +70,8 @@ registerLocaleData(localPt);
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MatIconModule,
+    ReactiveFormsModule,
   ],
   providers: [
     {
