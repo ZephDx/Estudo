@@ -7,6 +7,8 @@ import { ProductDeleteComponent } from './components/product/product-delete/prod
 import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 import { HomeComponent }  from "./views/home/home.component";
 import { ProductCrudComponent } from "./views/product-crud/product-crud.component"
+import { ProductCreate2Component } from './components/product/product-create2/product-create2.component';
+
 
 const routes: Routes = [
   {
@@ -19,7 +21,7 @@ component: ProductCrudComponent
 },
 {
 path: "products/create",
-component: ProductCreateComponent
+component: ProductCreate2Component
 },
 {
   path: "products/update/:id",

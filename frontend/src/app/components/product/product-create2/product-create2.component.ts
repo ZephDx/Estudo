@@ -1,7 +1,9 @@
 import { Component, OnInit } from "@angular/core";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
 import { Product } from "../product.model";
 import { ProductService } from "../product.service";
+
 
 @Component({
   selector: "app-product-create2",
@@ -15,12 +17,28 @@ export class ProductCreate2Component implements OnInit {
     pic: "",
   };
 
-  constructor(private productService: ProductService, private router: Router) {}
+  form: FormGroup =  this.FormBuilder.group({
+    name: ["", [Validators.required, Validators.minLength(2)] ],
+    price: ["", [Validators.required,] ],
+    pic: ["", [Validators.minLength(6)]]
+  })
 
-  ngOnInit(): void {}
+  constructor(
+    private productService: ProductService, 
+    private router: Router, 
+    private FormBuilder: FormBuilder
+    ) {}
+
+  ngOnInit(): void {
+  }
+get name() {
+  return this.form.get('name');
+}
+
 
   createProduct(): void {
-    this.productService.create(this.product).subscribe(() => {
+
+    this.productService.create(this.form.value).subscribe(() => {
       this.productService.showMessage("Produto criado com sucesso!!");
       this.router.navigate(["/products"]);
     });
